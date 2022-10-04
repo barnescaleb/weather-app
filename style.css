@@ -1,6 +1,23 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: lightblue;
+    background-color: wheat;
 }
 
+.searchDiv {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    max-width: 350px;
+    gap: 1rem;
+}
+
+input {
+    background-color: white;
+    border-radius: 5px;
+    padding: .4rem;
+}
+button {
+    border-radius: 5px;
+    background-color: orange;
+}

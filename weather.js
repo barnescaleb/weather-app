@@ -18,12 +18,12 @@ async function getWeather() {
         console.log(searchState);
         console.log(searchCountry);
 
-        const response = await fetch('')
-        console.log(response.json);
-
-        return getWeather;
+        const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "," + searchState + "," + searchCountry + "&units=imperial&appid=c02d215c80eae3269bf0160cf63f01d1", {mode: 'cors'} )
+        const currentData = await response.json();
+        console.log("Fetching current weather data...", currentData);
+        return currentData;
     } catch (err) {
-        console.log("Something went wrong...")
+        console.log("Something went wrong...", err)
     }
 }
 
